@@ -54,10 +54,11 @@ header {
 }
 
 header h1 {
-  font-size: 25px;
+  font-size: 20px;
   color: #76d1c4;
   font-weight: bold;
   position: relative;
+  letter-spacing: 3px;
   top: 5px;
 }
 
