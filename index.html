@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Land of Grandeur</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo-title">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <h1>THE LAND OF GRANDEUR </h1>
+      </div>
+      <nav class="nav-buttons">
+        <a href="#">HOME</a>
+        <a href="#">SOCIALS</a>
+        <a href="#">ABOUT</a>
+      </nav>
+    </header>
+
+    <div class="main-container">
+      <aside class="sidebar">
+        <ul class="sidebar-menu">
+          <li><a href="#" data-section="artisthood">ARTISTHOOD</a></li>
+          <li><a href="#" data-section="editorhood">EDITORHOOD</a></li>
+          <li><a href="#" data-section="musichood">MUSICHOOD</a></li>
+          <li><a href="#" data-section="writerhood">WRITERHOOD</a></li>
+        </ul>
+      </aside>
+
+      <main class="content-area">
+        <!-- ARTISTHOOD -->
+        <section id="artisthood" class="content-section">
+  <center> <h1>ARTISTHOOD</h1> </center>
+
+  <div class="artist-tools">
+    <div class="tool-card">
+        
+      <h3>Traditional Artwork</h3>
+      <p>Explore sketching, painting, and calligraphy using pencils, ink, and papers.</p>
+    </div>
+    <div class="tool-card">
+      <h3>Digital Artwork</h3>
+      <p>Bring imagination to screen using technology and software like IbispaintX.</p>
+    </div>
+        <div class="tool-card">
+      <h3>Updates and Activities</h3>
+      <p>Deliver announcements and content refreshers with sleek, visually engaging formats using graphic tools.</p>
+    </div>
+  </div>
+</section>
+
+        <!-- EDITORHOOD -->
+        <section id="editorhood" class="content-section">
+  <h2>EDITORHOOD</h2>
+
+  <div class="editor-tools">
+    <div class="tool-card">
+      <h3>Uniform DP Blast</h3>
+      <p>Coordinate a visual identity across your team or community using unified display photos, layouts, and branding aesthetics.</p>
+    </div>
+    <div class="tool-card">
+      <h3>Manipulations</h3>
+      <p>Reimagine visuals with advanced editing techniques — from surreal composites to realistic corrections.</p>
+    </div>
+    <div class="tool-card">
+      <h3>Updates and Activities</h3>
+      <p>Deliver announcements and content refreshers with sleek, visually engaging formats using graphic tools.</p>
+    </div>
+  </div>
+</section>
+
+        <!-- MUSICHOOD -->
+        <section id="musichood" class="content-section">
+  <h2>MUSICHOOD</h2>
+
+  <div class="music-tools">
+    <div class="tool-card">
+      <h3>Live Concerts</h3> 
+      <p>Experience the magic of raw performance, stage presence, and live audience connection through band or solo acts.</p>
+    </div>
+    <div class="tool-card">
+      <h3>Solo Song Covers</h3>
+      <p>Reimagine existing music through your own voice, style, and instrumentation using simple setups or studio rigs.</p>
+    </div>
+    <div class="tool-card">
+      <h3>Collaboration Song Covers</h3>
+      <p>Reimagine existing music through your own voice, style, and instrumentation using simple setups or studio rigs.</p>
+    </div>
+  </div>
+</section>
+        </section>
+
+        <!-- WRITERHOOD -->
+        <section id="writerhood" class="content-section">
+  <h2>WRITERHOOD</h2>
+
+  <div class="writer-tools">
+    <div class="tool-card">
+      <h3>Proses and Poems</h3>
+      <p>Craft lyrical verses and structured reflections — expressive or abstract, heartfelt or sharp.</p>
+    </div>
+
+    <div class="tool-card">
+      <h3>Concrete and Tautograms</h3>
+      <p>Play with the form of words and structure: shape poetry, alliterations, and wordplay in visual or alphabetical patterns.</p>
+    </div>
+
+    <div class="tool-card">
+      <h3>Fiction & Non-Fiction Stories</h3>
+      <p>Spin tales or tell truths. Share narratives from fantasy, personal memoirs, historical recounts, or imaginative fiction.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+    <footer>
+      <div class="footer-content">
+        <p>© 2025 The Land of Grandeur</p>
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const links = document.querySelectorAll('.sidebar-menu a');
+    const sections = document.querySelectorAll('.content-section');
+
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.dataset.section;
+
+        // Hide all content sections
+        sections.forEach(sec => sec.classList.remove('active'));
+
+        // Show selected
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) targetSection.classList.add('active');
+
+        // Update active link
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
